@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PlanetResourceTest" project="B2W" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.daniel.b2w.resouce.test.PlanetResourceTest" time="0.754" displayname="PlanetResourceTest" uniqueid="[engine:junit-jupiter]/[class:com.daniel.b2w.resouce.test.PlanetResourceTest]">
+    <testcase name="retornaSucesso_BuscaPorNome" classname="com.daniel.b2w.resouce.test.PlanetResourceTest" time="0.715" displayname="retornaSucesso_BuscaPorNome()" uniqueid="[engine:junit-jupiter]/[class:com.daniel.b2w.resouce.test.PlanetResourceTest]/[method:retornaSucesso_BuscaPorNome()]"/>
+    <testcase name="retornaSucesso_BuscaPorID" classname="com.daniel.b2w.resouce.test.PlanetResourceTest" time="0.039" displayname="retornaSucesso_BuscaPorID()" uniqueid="[engine:junit-jupiter]/[class:com.daniel.b2w.resouce.test.PlanetResourceTest]/[method:retornaSucesso_BuscaPorID()]"/>
+  </testsuite>
+</testrun>

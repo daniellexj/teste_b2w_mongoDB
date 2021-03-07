@@ -1,0 +1,55 @@
+package com.daniel.b2w.resouce.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.HttpStatus;
+
+import com.daniel.b2w.domain.Planet;
+import com.daniel.b2w.dto.PlanetDTO;
+import com.daniel.b2w.resource.PlanetResource;
+import com.daniel.b2w.service.PlanetService;
+
+import io.restassured.http.ContentType;
+
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.standaloneSetup;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+@WebMvcTest
+public class PlanetResourceTest {
+
+	@Autowired
+	private PlanetResource planetResource;
+
+	@MockBean
+	private PlanetService planetService;
+
+	@BeforeEach
+	public void setup() {
+		standaloneSetup(this.planetResource);
+	}
+
+	@Test
+	public void insertPost() {
+
+		
+		
+		when(this.planetService.findAll().
+		thenReturn(new Planet( "6043f0ab736fe9619440cda5,""Yavin IV", "temperate, tropical","jungle, rainforests"));
+
+		given().
+			accept(ContentType.JSON).
+		when().
+			post("/planets/").
+		then().
+			statusCode(HttpStatus.OK.value());
+
+	}
+
+}
