@@ -1,0 +1,22 @@
+package com.daniel.b2w.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.daniel.b2w.domain.Planet;
+import com.daniel.b2w.repository.PlanetRepository;
+
+@Service
+public class PlanetService {
+	
+	@Autowired
+	private PlanetRepository planetRepository;
+
+	public List<Planet> findAll(){
+		return planetRepository.findAll();
+	}
+
+
+}

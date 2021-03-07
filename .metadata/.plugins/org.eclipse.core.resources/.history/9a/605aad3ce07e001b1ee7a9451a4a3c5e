@@ -1,0 +1,16 @@
+package com.daniel.b2w.repository;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import com.daniel.b2w.domain.Planet;
+
+public interface PlanetRepositoryFind extends MongoRepository<Planet, String> {
+
+	@Query("{ 'name': { $regex: ?0, $options: 'i' } }")
+	List<Planet> searchTitle(String text);
+
+	List<Planet> findByTitleContainingIgnoreCase(String text);
+}

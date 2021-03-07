@@ -1,0 +1,5 @@
+package com.daniel.b2w.domain;
+
+public class Planet {
+
+}

@@ -1,0 +1,8 @@
+package com.daniel.b2w.repository;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PlanetRepository {
+
+}

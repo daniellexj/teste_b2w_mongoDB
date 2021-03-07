@@ -1,0 +1,16 @@
+package com.daniel.b2w.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.daniel.b2w.repository.PlanetRepository;
+
+@RestController
+@RequestMapping(value = "/planets")
+public class PlanetResource {
+	
+	@Autowired
+	private PlanetRepository repo;
+
+}
